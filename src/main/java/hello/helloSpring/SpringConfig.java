@@ -1,9 +1,8 @@
 package hello.helloSpring;
 
-import hello.helloSpring.repository.MemberInterface;
+import hello.helloSpring.repository.MemberRepository;
 import hello.helloSpring.repository.MemoryMemberRepository;
 import hello.helloSpring.service.MemberService;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,7 +15,7 @@ public class SpringConfig {
     }
 
     @Bean
-    public MemberInterface memberRepository() {
+    public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
 }

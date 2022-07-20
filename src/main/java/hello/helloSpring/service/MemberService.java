@@ -1,21 +1,18 @@
 package hello.helloSpring.service;
 
 import hello.helloSpring.domain.Member;
-import hello.helloSpring.repository.MemberInterface;
-import hello.helloSpring.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import hello.helloSpring.repository.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberInterface memberRepository;
+    private final MemberRepository memberRepository;
 
     //memberRepository를 직접 내부에서 new로 생성하는 것이 아니라
     //외부에서 넣어주도록 변경
-    public MemberService(MemberInterface memberRepository) {
+    public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
